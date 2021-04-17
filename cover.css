@@ -4,20 +4,9 @@ body {
   background-position:center top;
   background-image: url("./img/bylac.jpg");
   background-size:cover;
-  /* background-origin: border-box; */
   background-repeat: no-repeat;
-  /* max-height:100%; */
-  /* height:800px; */
-  /* width: 1500px; */
 }
 
-.bg-container{
-  
-}
-.bg {
-  max-height: 50%;
-  /* width:10px; */
-}
 a{
   text-decoration: none;
   color:#D80E39;
