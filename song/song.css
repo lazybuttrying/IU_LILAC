@@ -30,6 +30,32 @@ body {
   position: relative;
 }
 
+#lyric span{
+  position: relative;
+  opacity: 0; 
+  animation: animateOverlay 1s ease-in-out forwards;
+}
+
+#lyric span:nth-child(4n+1){
+  animation-delay: 0s;
+}
+#lyric span:nth-child(4n){
+  animation-delay: 1s;
+}
+#lyric span:nth-child(4n+2){
+  animation-delay: 2s;
+}
+#lyric span:nth-child(4n+3){
+  animation-delay: 3s;
+}
+
+
+@keyframes animateOverlay {
+  to{
+    opacity: 1;
+    top: 0;
+  }
+}
 
 
 .box {
@@ -45,7 +71,7 @@ body {
 .wave {
   position: absolute;
   top: -198px;
-  width: 6000px;
+  width: 100%;
   height: 198px;
   
   background: white;
@@ -74,16 +100,18 @@ body {
   display: block;
   left: 0;
   top: 0;
-  width: 6000px;
+  width: 100%;
   height: 400px;
   z-index: -10;
 }
 @keyframes wave {
   0% {
-    margin-left: 0;
+    /* margin-left: 0; */
+    transform: translateY(5%);
   }
   100% {
-    margin-left: -1600px;
+    /* margin-left: -1600px; */
+    transform: translateY(-5%);
   }
 }
 
@@ -116,3 +144,6 @@ iframe:hover{
   transform:scale(1.4);
   transition: transform .5s;
 }
+
+
+
