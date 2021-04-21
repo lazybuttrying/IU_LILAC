@@ -130,6 +130,15 @@ a:visited{
    }
 
 }
+@media (min-width:1050px){
+  body{
+    background-size:80%;
+  }
+  #coverText{
+    margin-top: 380%;
+   }
+
+}
 
 #coverText:hover{
   background : none repeat scroll 0 0 transparent;
