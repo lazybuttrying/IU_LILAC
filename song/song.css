@@ -9,11 +9,12 @@ body {
   font-weight: 600;
 }
 
-
+.title{
+  margin:20px 0;
+}
 
 .middle {
-  margin-top:5%;
-  margin-bottom: 40%;
+  margin-bottom: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,20 +60,17 @@ body {
 
 
 .box {
-  height: 5%;
+  height: 200px;
   width:100%;
   position:absolute;
   top:850px;
   left:0;
 }
-
-
-
 .wave {
   position: absolute;
-  top: -198px;
+  top: -200px;
   width: 100%;
-  height: 198px;
+  height: 200px;
   
   background: white;
   opacity: .2;
@@ -84,6 +82,7 @@ body {
   .wave{
     height:100px;
   }
+  .middle{margin-bottom:200px;}
   .iframe{
     width:100px;
     height:50px;
@@ -91,37 +90,18 @@ body {
 }
 
 .wave:nth-of-type(2) {
-  top: -198px;
+  top: -200px;
   animation: wave 4s cubic-bezier( 0.36, 0.2, 0.83, 0.53) -.125s infinite, swell 3s ease-in-out -1.25s infinite;
   opacity: .3;
 }
-.box:after {
-  content: '';
-  display: block;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 400px;
-  z-index: -10;
-}
-@keyframes wave {
-  0% {
-    /* margin-left: 0; */
-    transform: translateY(5%);
-  }
-  100% {
-    /* margin-left: -1600px; */
-    transform: translateY(-5%);
-  }
-}
 
+@keyframes wave {
+  0% { transform: translateY(5%); }
+  100% { transform: translateY(-5%); }
+}
 @keyframes swell {
-  0%, 100% {
-    transform: translate3d(0,-10px,0);
-  }
-  50% {
-    transform: translate3d(0,10px,0);
-  }
+  0%, 100% { transform: translate3d(0,-10px,0); }
+  50% { transform: translate3d(0,10px,0); }
 }
 
 .mv {
@@ -138,7 +118,6 @@ iframe{
   width:500px; 
   height:350px;
   border-style: none;
-  
 }
 iframe:hover{
   transform:scale(1.4);
