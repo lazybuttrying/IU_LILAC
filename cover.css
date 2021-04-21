@@ -73,6 +73,7 @@ a:visited{
   }
   .middle{
     filter:blur(0);
+
   }
   
 }
@@ -130,24 +131,15 @@ a:visited{
    }
 
 }
-@media (min-width:1050px){
-  body{
-    background-size:80%;
-  }
-  #coverText{
-    margin-top: 380%;
-   }
 
-}
-
-#coverText:hover{
+#coverText:hover:after{
   background : none repeat scroll 0 0 transparent;
   content: "";
   display: block;
   margin: 10px;
   height: 2px;
   background:#fff;
-  animation: 3s slidein infinite;
+  animation: 3s 0.5s slidein infinite;
 }
 
 @keyframes slidein{
