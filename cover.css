@@ -1,69 +1,144 @@
 
 body {
-  background-color: #988CB3;
-  background-position:center top;
-  background-image: url("./img/bylac.jpg");
-  background-size:cover;
-  background-repeat: no-repeat;
+  background-color: #9386b1;
+  font-family: 'Noto Serif KR', serif;
+  overflow-x: hidden;
+  touch-action: pan-y;
+}
+
+nav{
+  display:flex;
+  flex-direction: column;
+  background-color: #fff;
+  opacity: 0.4; 
+  margin:2% 1%;
+}
+
+nav ul{
+  justify-content: space-around;
+  text-align: center;
+  padding: 3px;
+  margin:10px;
+
+}
+nav li {
+  font-family: 'Noto Serif KR', serif;
+  font-weight: 700;
+  list-style: none;
+  flex:1;
+}
+
+nav a:visited{
+  color: #000;
+}
+nav a:hover{
+  color: #9386b1;
+}
+
+.menu-toggle-btn{
+  display:none;
+}
+
+.background{
+  width:100%;
 }
 
 a{
   text-decoration: none;
   color:#D80E39;
 }
+
 a:visited{
   color:#D1113D;
 }
-/* a:focus{
-  -webkit-tap-highlight-color:rgba(0,0,0,0);
-  outline:none;
-} */
+
 
 .middle {
-  display:block;
-  position: absolute;
-  top:50%; left:50%;
-  transform: translate(-50%, -60%);
+  display:block; 
+  margin: 5%;
   text-align: center;
 }
 
 #coverText{
-  margin-top: 300%;
   text-decoration: none;
   display: inline-block;
-  padding:15px 0;
-  position: relative;
 }
+
+@media (min-width:700px) {
+  nav ul{
+    display: flex;
+  }
+  .background{
+    filter:blur(0);
+  }
+  .middle{
+    filter:blur(0);
+  }
+  
+}
+
 @media (max-width:700px){
-  #coverText{
-   margin-top: 180%;
+  body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  nav{
+    display:none;
+    flex-direction: row;
+    padding:5% 0;
+    width:90%;
+    height:100%;
+    position: absolute;   
+    z-index:1;
+    top:0;
+    
+  }
+  nav ul{
+    display: flex;
+    height:95%;
+    flex-direction: column;
+    opacity: 0.9;
+    flex:1;
+  }
+  nav ul li{
+    font-size: larger;
+    font-weight: 1000;
+  }
+  .menu-toggle-btn{
+    display: block;
+    position: absolute;
+    opacity: 0.7;
+    right:0;
+    z-index: 2;
+  } 
+  
+  .background{
+    width:180%;
   }
 }
 @media (min-width:1050px){
   body{
     background-size:80%;
   }
-  #coverText{
-    margin-top: 380%;
+   nav{
+     margin: 1% 10%;
+   }
+   .background{
+     width:60%;
+     margin: 0 20%;
    }
 
 }
 
-#coverText:after{
+#coverText:hover{
   background : none repeat scroll 0 0 transparent;
-  bottom: 0;
   content: "";
   display: block;
+  margin: 10px;
   height: 2px;
-  left:50%;
-  position: absolute;
   background:#fff;
   animation: 3s slidein infinite;
-}
-
-#coverText:hover:after {
-  width:100%;
-  left:0;
 }
 
 @keyframes slidein{
